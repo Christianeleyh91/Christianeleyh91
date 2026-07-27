@@ -37,7 +37,10 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /Christianeleyh91/);
   assert.match(html, /github-profile-icon/);
   assert.match(html, /src="\/icons\/github\.svg"/);
-  assert.match(html, /mailto:christian\.eleyh1391@gmail\.com/);
+  assert.match(
+    html,
+    /mail\.google\.com\/mail\/\?view=cm&amp;fs=1&amp;to=christian\.eleyh1391%40gmail\.com/,
+  );
   assert.match(html, /logo_loading_2x\.png/);
   assert.match(html, /social-brand-icon/);
   assert.equal((html.match(/class="orbit-dot"/g) ?? []).length, 8);
