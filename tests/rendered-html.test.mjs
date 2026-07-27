@@ -35,6 +35,8 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /Eleyh/);
   assert.match(html, /christian-avatar\.png/);
   assert.match(html, /Christianeleyh91/);
+  assert.match(html, /github-profile-icon/);
+  assert.match(html, /src="\/icons\/github\.svg"/);
   assert.match(html, /https:\/\/open\.spotify\.com\//);
   assert.match(html, /<span dir="ltr">C\+\+<\/span>/);
   assert.match(html, /<span dir="ltr">JS<\/span>/);
