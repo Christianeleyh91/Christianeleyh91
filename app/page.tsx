@@ -29,7 +29,7 @@ const socials = [
   {
     label: "Gmail",
     icon: "https://ssl.gstatic.com/ui/v1/icons/mail/logo_loading_2x.png",
-    href: "mailto:christian.eleyh1391@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=christian.eleyh1391%40gmail.com",
     brandIcon: true,
   },
 ];
