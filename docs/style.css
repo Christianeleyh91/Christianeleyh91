@@ -967,7 +967,7 @@ html[data-theme="light"] .portrait-frame img {
   background: var(--surface);
 }
 
-.github-profile > span {
+.github-profile-icon {
   display: grid;
   width: 38px;
   height: 38px;
@@ -975,7 +975,16 @@ html[data-theme="light"] .portrait-frame img {
   border-radius: 12px;
   background: var(--ink);
   color: var(--navy-950);
-  font: 700 10px/1 "Space Grotesk", sans-serif;
+}
+
+.github-profile-icon img {
+  width: 19px;
+  height: 19px;
+  filter: brightness(0);
+}
+
+html[data-theme="light"] .github-profile-icon img {
+  filter: brightness(0) invert(1);
 }
 
 .github-profile b {
