@@ -40,8 +40,7 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /mailto:christian\.eleyh1391@gmail\.com/);
   assert.match(html, /logo_loading_2x\.png/);
   assert.match(html, /social-brand-icon/);
-  assert.match(html, /orbit-node orbit-star/);
-  assert.match(html, /orbit-node orbit-halo/);
+  assert.equal((html.match(/class="orbit-dot"/g) ?? []).length, 8);
   assert.doesNotMatch(html, /<span dir="ltr">DREAM<\/span>/);
   assert.match(
     html,
