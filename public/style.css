@@ -663,21 +663,14 @@ html[data-theme="light"] .portrait-frame img {
     0 0 6px rgba(232, 241, 255, 0.98),
     0 0 16px rgba(128, 173, 255, 0.8),
     0 0 34px rgba(128, 173, 255, 0.38);
-  transform:
-    translate(-50%, -50%)
-    rotate(var(--dot-angle))
-    translateX(min(295px, 45vw));
+  transform: translate(-50%, -50%);
   animation: orbit-dot-pulse 2.8s ease-in-out infinite;
 }
 
-.orbit-dot:nth-child(1) { --dot-angle: 0deg; }
-.orbit-dot:nth-child(2) { --dot-angle: 45deg; animation-delay: -0.35s; }
-.orbit-dot:nth-child(3) { --dot-angle: 90deg; animation-delay: -0.7s; }
-.orbit-dot:nth-child(4) { --dot-angle: 135deg; animation-delay: -1.05s; }
-.orbit-dot:nth-child(5) { --dot-angle: 180deg; animation-delay: -1.4s; }
-.orbit-dot:nth-child(6) { --dot-angle: 225deg; animation-delay: -1.75s; }
-.orbit-dot:nth-child(7) { --dot-angle: 270deg; animation-delay: -2.1s; }
-.orbit-dot:nth-child(8) { --dot-angle: 315deg; animation-delay: -2.45s; }
+.orbit-dot:nth-child(1) { top: 50%; left: 100%; }
+.orbit-dot:nth-child(2) { top: 100%; left: 50%; animation-delay: -0.7s; }
+.orbit-dot:nth-child(3) { top: 50%; left: 0; animation-delay: -1.4s; }
+.orbit-dot:nth-child(4) { top: 0; left: 50%; animation-delay: -2.1s; }
 
 .orbit-two {
   width: min(505px, 82vw);
