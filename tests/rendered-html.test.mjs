@@ -43,7 +43,7 @@ test("renders Christian Eleyh portfolio", async () => {
   );
   assert.match(html, /logo_loading_2x\.png/);
   assert.match(html, /social-brand-icon/);
-  assert.equal((html.match(/class="orbit-dot"/g) ?? []).length, 8);
+  assert.equal((html.match(/class="orbit-dot"/g) ?? []).length, 4);
   assert.doesNotMatch(html, /<span dir="ltr">DREAM<\/span>/);
   assert.match(
     html,
