@@ -273,7 +273,9 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <span>GH</span>
+              <span className="github-profile-icon" aria-hidden="true">
+                <img src="/icons/github.svg" alt="" />
+              </span>
               <b data-i18n="githubProfile">پروفایل گیت‌هاب</b>
               <i aria-hidden="true">↗</i>
             </a>
