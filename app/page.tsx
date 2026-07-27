@@ -144,11 +144,14 @@ export default function Home() {
 
           <div className="hero-visual reveal" id="portraitStage">
             <div className="portrait-orbit orbit-one" aria-hidden="true">
-              <i className="orbit-node orbit-star" />
-              <i className="orbit-node orbit-ring" />
-              <i className="orbit-node orbit-pulse" />
-              <i className="orbit-node orbit-diamond" />
-              <i className="orbit-node orbit-halo" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
+              <i className="orbit-dot" />
             </div>
             <div className="portrait-orbit orbit-two" aria-hidden="true" />
             <div className="portrait-glow" aria-hidden="true" />
