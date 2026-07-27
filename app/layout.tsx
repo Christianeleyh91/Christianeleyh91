@@ -20,8 +20,8 @@ const baseMetadata: Metadata = {
   authors: [{ name: "Christian Eleyh Babrudy" }],
   creator: "Christian Eleyh",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.svg?v=ce-2",
+    shortcut: "/favicon.svg?v=ce-2",
   },
   openGraph: {
     type: "website",
