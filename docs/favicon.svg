@@ -1,16 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="8" y1="5" x2="56" y2="59" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#102a59"/>
-      <stop offset="1" stop-color="#040b1b"/>
+    <linearGradient id="bg" x1="8" y1="5" x2="57" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17366b"/>
+      <stop offset=".52" stop-color="#091a38"/>
+      <stop offset="1" stop-color="#030918"/>
     </linearGradient>
-    <linearGradient id="ink" x1="18" y1="17" x2="49" y2="47" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#a9c9ff"/>
+    <linearGradient id="glass" x1="10" y1="7" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".025"/>
     </linearGradient>
+    <linearGradient id="ink" x1="17" y1="15" x2="49" y2="47" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#b9d4ff"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="18" fill="url(#bg)"/>
-  <rect x="5" y="5" width="54" height="54" rx="14" fill="none" stroke="#c8dcff" stroke-opacity=".34"/>
-  <text x="31" y="40" fill="url(#ink)" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic" font-weight="700" text-anchor="middle" letter-spacing="-4">CE</text>
-  <path d="M18 45c8 4 18 3 30-3" fill="none" stroke="#d8e7ff" stroke-linecap="round" stroke-opacity=".78" stroke-width="1.5"/>
+  <rect width="64" height="64" rx="19" fill="url(#bg)"/>
+  <rect x="5.5" y="5.5" width="53" height="53" rx="14.5" fill="url(#glass)" stroke="#d5e5ff" stroke-opacity=".3"/>
+  <g fill="none" stroke="url(#ink)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M34 19c-2.5-3.2-8.4-3.8-12.3-.5-5.7 4.8-6.2 15.7-1 21.5 4.2 4.8 11 4.8 16.1.4" stroke-width="3.4"/>
+    <path d="M44.6 17.5c-4.2 2.3-7.4 8.7-9.5 15.1-2 6-2.1 10.5.7 11.2 3.1.8 8.2-3.1 11.5-7.1M36.7 29.8c3.7-.2 7.1-.9 10.2-2.2" stroke-width="3"/>
+  </g>
+  <path d="M17.5 47c8.7 3.9 19.4 3 30.8-3.1" fill="none" stroke="#e3edff" stroke-linecap="round" stroke-opacity=".78" stroke-width="1.55"/>
 </svg>
