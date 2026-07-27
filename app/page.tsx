@@ -28,8 +28,9 @@ const socials = [
   },
   {
     label: "Gmail",
-    icon: null,
+    icon: "https://ssl.gstatic.com/ui/v1/icons/mail/logo_loading_2x.png",
     href: "mailto:christian.eleyh1391@gmail.com",
+    brandIcon: true,
   },
 ];
 
@@ -143,11 +144,11 @@ export default function Home() {
 
           <div className="hero-visual reveal" id="portraitStage">
             <div className="portrait-orbit orbit-one" aria-hidden="true">
-              <span dir="ltr">DREAM</span>
-              <span dir="ltr">CREATE</span>
-              <span dir="ltr">PLAY</span>
-              <span dir="ltr">EXPLORE</span>
-              <span dir="ltr">EVOLVE</span>
+              <i className="orbit-node orbit-star" />
+              <i className="orbit-node orbit-ring" />
+              <i className="orbit-node orbit-pulse" />
+              <i className="orbit-node orbit-diamond" />
+              <i className="orbit-node orbit-halo" />
             </div>
             <div className="portrait-orbit orbit-two" aria-hidden="true" />
             <div className="portrait-glow" aria-hidden="true" />
@@ -314,11 +315,12 @@ export default function Home() {
             className="magnetic"
             key={social.label}
           >
-            {social.icon ? (
-              <img src={social.icon} alt="" aria-hidden="true" />
-            ) : (
-              <i className="social-gmail-icon" aria-hidden="true" />
-            )}
+            <img
+              src={social.icon}
+              alt=""
+              aria-hidden="true"
+              className={social.brandIcon ? "social-brand-icon" : undefined}
+            />
             <span>{social.label}</span>
           </a>
         ))}
