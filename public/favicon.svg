@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="8" y1="5" x2="57" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#17366b"/>
-      <stop offset=".52" stop-color="#091a38"/>
+    <linearGradient id="bg" x1="7" y1="5" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17396f"/>
+      <stop offset=".48" stop-color="#0a1b3a"/>
       <stop offset="1" stop-color="#030918"/>
     </linearGradient>
-    <linearGradient id="glass" x1="10" y1="7" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+    <linearGradient id="glass" x1="9" y1="6" x2="54" y2="57" gradientUnits="userSpaceOnUse">
       <stop stop-color="#fff" stop-opacity=".16"/>
       <stop offset="1" stop-color="#fff" stop-opacity=".025"/>
     </linearGradient>
-    <linearGradient id="ink" x1="17" y1="15" x2="49" y2="47" gradientUnits="userSpaceOnUse">
+    <linearGradient id="ink" x1="17" y1="13" x2="49" y2="48" gradientUnits="userSpaceOnUse">
       <stop stop-color="#fff"/>
-      <stop offset="1" stop-color="#b9d4ff"/>
+      <stop offset="1" stop-color="#bad5ff"/>
     </linearGradient>
-    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
-      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -23,9 +23,6 @@
   </defs>
   <rect width="64" height="64" rx="19" fill="url(#bg)"/>
   <rect x="5.5" y="5.5" width="53" height="53" rx="14.5" fill="url(#glass)" stroke="#d5e5ff" stroke-opacity=".3"/>
-  <g fill="none" stroke="url(#ink)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
-    <path d="M34 19c-2.5-3.2-8.4-3.8-12.3-.5-5.7 4.8-6.2 15.7-1 21.5 4.2 4.8 11 4.8 16.1.4" stroke-width="3.4"/>
-    <path d="M44.6 17.5c-4.2 2.3-7.4 8.7-9.5 15.1-2 6-2.1 10.5.7 11.2 3.1.8 8.2-3.1 11.5-7.1M36.7 29.8c3.7-.2 7.1-.9 10.2-2.2" stroke-width="3"/>
-  </g>
-  <path d="M17.5 47c8.7 3.9 19.4 3 30.8-3.1" fill="none" stroke="#e3edff" stroke-linecap="round" stroke-opacity=".78" stroke-width="1.55"/>
+  <text x="30.5" y="40.5" fill="url(#ink)" filter="url(#glow)" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="30" font-style="italic" font-weight="700" letter-spacing="-4.7" text-anchor="middle">CE</text>
+  <path d="M17 46.5c8.8 4.1 19.8 3 31.2-3.2" fill="none" stroke="#e3edff" stroke-linecap="round" stroke-opacity=".82" stroke-width="1.55"/>
 </svg>
