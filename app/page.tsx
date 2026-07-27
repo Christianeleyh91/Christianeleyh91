@@ -148,10 +148,6 @@ export default function Home() {
               <i className="orbit-dot" />
               <i className="orbit-dot" />
               <i className="orbit-dot" />
-              <i className="orbit-dot" />
-              <i className="orbit-dot" />
-              <i className="orbit-dot" />
-              <i className="orbit-dot" />
             </div>
             <div className="portrait-orbit orbit-two" aria-hidden="true" />
             <div className="portrait-glow" aria-hidden="true" />
