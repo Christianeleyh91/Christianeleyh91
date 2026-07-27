@@ -35,6 +35,10 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /Eleyh/);
   assert.match(html, /christian-avatar\.png/);
   assert.match(html, /Christianeleyh91/);
+  assert.match(html, /https:\/\/open\.spotify\.com\//);
+  assert.match(html, /<span dir="ltr">C\+\+<\/span>/);
+  assert.match(html, /<span dir="ltr">JS<\/span>/);
+  assert.doesNotMatch(html, /social-line/);
   assert.match(html, /ClientBoot-/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
