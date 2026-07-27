@@ -644,38 +644,100 @@ html[data-theme="light"] .portrait-frame img {
   animation: spin 24s linear infinite;
 }
 
-.orbit-one span {
+.orbit-node {
   position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 11px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
   border: 1px solid color-mix(in srgb, var(--blue) 28%, var(--line));
-  border-radius: 50px;
+  border-radius: 12px;
   background: color-mix(in srgb, var(--navy-950) 84%, transparent);
-  box-shadow: 0 10px 28px rgba(3, 9, 24, 0.24);
+  box-shadow: 0 10px 28px rgba(3, 9, 24, 0.24), inset 0 0 16px rgba(128, 173, 255, 0.08);
   color: var(--ice);
-  font: 500 8px/1 "Space Grotesk", sans-serif;
-  direction: ltr;
-  letter-spacing: 0.16em;
-  unicode-bidi: isolate;
   backdrop-filter: blur(10px);
+  animation: counter-spin 24s linear infinite;
 }
 
-.orbit-one span::before {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--blue);
+.orbit-node:nth-child(1) { top: 7%; left: 25%; }
+.orbit-node:nth-child(2) { top: 36%; right: -4%; }
+.orbit-node:nth-child(3) { right: 8%; bottom: 17%; }
+.orbit-node:nth-child(4) { bottom: 8%; left: 23%; }
+.orbit-node:nth-child(5) { top: 45%; left: -3%; }
+
+.orbit-star::before,
+.orbit-star::after {
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  border-radius: 4px;
+  background: var(--ice);
   box-shadow: 0 0 10px var(--blue);
   content: "";
 }
 
-.orbit-one span:nth-child(1) { top: 7%; left: 25%; }
-.orbit-one span:nth-child(2) { top: 36%; right: -4%; }
-.orbit-one span:nth-child(3) { right: 8%; bottom: 17%; }
-.orbit-one span:nth-child(4) { bottom: 8%; left: 23%; }
-.orbit-one span:nth-child(5) { top: 45%; left: -3%; }
+.orbit-star::after {
+  transform: rotate(90deg);
+}
+
+.orbit-ring::before {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--ice);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(128, 173, 255, 0.45);
+  content: "";
+}
+
+.orbit-ring::after {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 9px var(--blue);
+  content: "";
+}
+
+.orbit-pulse::before {
+  width: 3px;
+  height: 13px;
+  border-radius: 3px;
+  background: var(--ice);
+  box-shadow: -7px 4px 0 -0.5px var(--blue), 7px -3px 0 -0.5px var(--blue);
+  content: "";
+}
+
+.orbit-diamond::before {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--ice);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(128, 173, 255, 0.4);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.orbit-halo::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ice);
+  box-shadow: 0 0 12px 2px var(--blue);
+  content: "";
+}
+
+.orbit-halo::after {
+  position: absolute;
+  width: 19px;
+  height: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-22deg);
+}
 
 .orbit-two {
   width: min(505px, 82vw);
@@ -687,6 +749,10 @@ html[data-theme="light"] .portrait-frame img {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+@keyframes counter-spin {
+  to { transform: rotate(-360deg); }
 }
 
 .portrait-label {
@@ -1201,52 +1267,20 @@ html[data-theme="light"] .github-profile-icon img {
   transition: opacity 0.25s, transform 0.25s var(--ease);
 }
 
-.social-gmail-icon {
-  position: relative;
-  display: block;
-  width: 18px;
-  min-width: 18px;
-  height: 14px;
-  margin: 0 10px;
-  border: 1.7px solid currentColor;
-  border-radius: 3px;
-  color: var(--ink);
-  transition: opacity 0.25s, transform 0.25s var(--ease);
-}
-
-.social-gmail-icon::before,
-.social-gmail-icon::after {
-  position: absolute;
-  top: 1px;
-  width: 9px;
-  height: 1.7px;
-  border-radius: 2px;
-  background: currentColor;
-  content: "";
-}
-
-.social-gmail-icon::before {
-  left: 1px;
-  transform: rotate(34deg);
-  transform-origin: left center;
-}
-
-.social-gmail-icon::after {
-  right: 1px;
-  transform: rotate(-34deg);
-  transform-origin: right center;
-}
-
 html[data-theme="light"] .social-rail img {
   filter: brightness(0);
 }
 
-.social-rail > a:hover img {
-  opacity: 1;
-  transform: scale(1.08);
+.social-rail img.social-brand-icon,
+html[data-theme="light"] .social-rail img.social-brand-icon {
+  width: 21px;
+  min-width: 21px;
+  height: 19px;
+  filter: none;
 }
 
-.social-rail > a:hover .social-gmail-icon {
+.social-rail > a:hover img {
+  opacity: 1;
   transform: scale(1.08);
 }
 
@@ -1631,11 +1665,11 @@ html[lang="en"] .title-kicker {
     margin: 0;
   }
 
-  .social-gmail-icon {
-    width: 20px;
-    min-width: 20px;
-    height: 15px;
-    margin: 0;
+  .social-rail img.social-brand-icon,
+  html[data-theme="light"] .social-rail img.social-brand-icon {
+    width: 22px;
+    min-width: 22px;
+    height: 20px;
   }
 
   .social-rail a > span {
