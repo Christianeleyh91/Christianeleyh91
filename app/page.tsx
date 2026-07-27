@@ -62,15 +62,17 @@ export default function Home() {
         </nav>
 
         <div className="header-actions">
-          <button
+          <a
             className="icon-button magnetic"
-            id="soundToggle"
-            type="button"
-            aria-label="Toggle piano sound"
-            title="Piano sound"
+            id="spotifyLink"
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Spotify"
+            title="Spotify"
           >
             <span aria-hidden="true">♫</span>
-          </button>
+          </a>
           <button
             className="text-button magnetic"
             id="langToggle"
@@ -136,10 +138,11 @@ export default function Home() {
 
           <div className="hero-visual reveal" id="portraitStage">
             <div className="portrait-orbit orbit-one" aria-hidden="true">
-              <span>PYTHON</span>
-              <span>PIANO</span>
-              <span>C++</span>
-              <span>WEB</span>
+              <span dir="ltr">PYTHON</span>
+              <span dir="ltr">PIANO</span>
+              <span dir="ltr">C++</span>
+              <span dir="ltr">WEB</span>
+              <span dir="ltr">JS</span>
             </div>
             <div className="portrait-orbit orbit-two" aria-hidden="true" />
             <div className="portrait-glow" aria-hidden="true" />
@@ -294,7 +297,6 @@ export default function Home() {
       </main>
 
       <aside className="social-rail" aria-label="Social links">
-        <span className="social-line" aria-hidden="true" />
         {socials.map((social) => (
           <a
             href={social.href}
