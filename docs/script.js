@@ -77,7 +77,7 @@
 
   let currentLanguage = localStorage.getItem("christian-language") || "fa";
   let cachedRepos = null;
-  let soundEnabled = false;
+  let repoLoadFailed = false;
   let audioContext = null;
 
   const query = (selector, context = document) => context.querySelector(selector);
@@ -100,6 +100,7 @@
     if (toggle) toggle.textContent = language === "fa" ? "EN" : "فا";
     localStorage.setItem("christian-language", language);
     if (cachedRepos) renderRepositories(cachedRepos);
+    else if (repoLoadFailed) renderRepositoryError();
   }
 
   function applyTheme(theme) {
@@ -248,19 +249,7 @@
   }
 
   function setupPiano() {
-    const soundButton = query("#soundToggle");
     const keys = queryAll(".piano-key");
-
-    const updateSoundButton = () => {
-      soundButton?.classList.toggle("is-active", soundEnabled);
-      if (soundButton) {
-        soundButton.style.color = soundEnabled ? "var(--blue)" : "";
-        soundButton.setAttribute(
-          "aria-pressed",
-          soundEnabled ? "true" : "false",
-        );
-      }
-    };
 
     const playNote = (frequency, key) => {
       audioContext ||= new (
@@ -284,15 +273,8 @@
       window.setTimeout(() => key.classList.remove("is-playing"), 160);
     };
 
-    soundButton?.addEventListener("click", () => {
-      soundEnabled = !soundEnabled;
-      updateSoundButton();
-    });
-
     keys.forEach((key) => {
       key.addEventListener("pointerdown", () => {
-        soundEnabled = true;
-        updateSoundButton();
         playNote(key.dataset.frequency, key);
       });
     });
@@ -358,6 +340,14 @@
       .join("");
   }
 
+  function renderRepositoryError() {
+    const grid = query("#repoGrid");
+    if (!grid) return;
+    grid.innerHTML = `<div class="repo-empty">${escapeHtml(
+      translations[currentLanguage].repoError,
+    )}</div>`;
+  }
+
   async function loadRepositories() {
     const grid = query("#repoGrid");
     if (!grid) return;
@@ -369,11 +359,12 @@
       if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
       const repositories = await response.json();
       cachedRepos = repositories.filter((repo) => !repo.fork);
+      repoLoadFailed = false;
       renderRepositories(cachedRepos);
     } catch {
-      grid.innerHTML = `<div class="repo-empty">${escapeHtml(
-        translations[currentLanguage].repoError,
-      )}</div>`;
+      cachedRepos = null;
+      repoLoadFailed = true;
+      renderRepositoryError();
     }
   }
 

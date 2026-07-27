@@ -652,13 +652,16 @@ html[data-theme="light"] .portrait-frame img {
   background: var(--navy-950);
   color: var(--muted);
   font: 500 8px/1 "Space Grotesk", sans-serif;
+  direction: ltr;
   letter-spacing: 0.12em;
+  unicode-bidi: isolate;
 }
 
-.orbit-one span:nth-child(1) { top: 7%; left: 26%; }
-.orbit-one span:nth-child(2) { top: 45%; right: -4%; }
-.orbit-one span:nth-child(3) { right: 25%; bottom: 7%; }
-.orbit-one span:nth-child(4) { top: 51%; left: -3%; }
+.orbit-one span:nth-child(1) { top: 7%; left: 25%; }
+.orbit-one span:nth-child(2) { top: 36%; right: -4%; }
+.orbit-one span:nth-child(3) { right: 8%; bottom: 17%; }
+.orbit-one span:nth-child(4) { bottom: 8%; left: 23%; }
+.orbit-one span:nth-child(5) { top: 45%; left: -3%; }
 
 .orbit-two {
   width: min(505px, 82vw);
@@ -1186,13 +1189,6 @@ html[data-theme="light"] .social-rail img {
   white-space: nowrap;
 }
 
-.social-line {
-  width: 1px;
-  height: 30px;
-  margin-left: 19px;
-  background: var(--line-strong);
-}
-
 footer {
   display: flex;
   min-height: 105px;
@@ -1371,10 +1367,6 @@ html[lang="en"] .title-kicker {
   .brand-mark {
     width: 40px;
     height: 40px;
-  }
-
-  #soundToggle {
-    display: none;
   }
 
   .hero {
@@ -1571,8 +1563,7 @@ html[lang="en"] .title-kicker {
     margin: 0;
   }
 
-  .social-rail a > span,
-  .social-line {
+  .social-rail a > span {
     display: none;
   }
 
