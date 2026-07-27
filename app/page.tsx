@@ -26,6 +26,11 @@ const socials = [
     icon: "/icons/github.svg",
     href: "https://github.com/Christianeleyh91",
   },
+  {
+    label: "Gmail",
+    icon: null,
+    href: "mailto:christian.eleyh1391@gmail.com",
+  },
 ];
 
 export default function Home() {
@@ -138,11 +143,11 @@ export default function Home() {
 
           <div className="hero-visual reveal" id="portraitStage">
             <div className="portrait-orbit orbit-one" aria-hidden="true">
-              <span dir="ltr">PYTHON</span>
-              <span dir="ltr">PIANO</span>
-              <span dir="ltr">C++</span>
-              <span dir="ltr">WEB</span>
-              <span dir="ltr">JS</span>
+              <span dir="ltr">DREAM</span>
+              <span dir="ltr">CREATE</span>
+              <span dir="ltr">PLAY</span>
+              <span dir="ltr">EXPLORE</span>
+              <span dir="ltr">EVOLVE</span>
             </div>
             <div className="portrait-orbit orbit-two" aria-hidden="true" />
             <div className="portrait-glow" aria-hidden="true" />
@@ -190,14 +195,14 @@ export default function Home() {
               <p data-i18n="aboutBody">
                 هفت سال است پیانو بخشی از زندگی من شده؛ تمرینی برای شنیدن،
                 صبر و ساختن جزئیات. در کنار موسیقی، برنامه‌نویسی با Python،
-                C++، HTML و CSS راه دیگری است برای تبدیل ایده‌هایم به چیزی
+                {"\u2066C++\u2069"}، HTML و CSS راه دیگری است برای تبدیل ایده‌هایم به چیزی
                 واقعی، دقیق و زنده.
               </p>
               <div className="skill-list">
                 {["Python", "C++", "HTML", "CSS"].map((skill, index) => (
                   <span key={skill}>
                     <i>0{index + 1}</i>
-                    {skill}
+                    <bdi className="skill-name" dir="ltr">{skill}</bdi>
                   </span>
                 ))}
               </div>
@@ -309,7 +314,11 @@ export default function Home() {
             className="magnetic"
             key={social.label}
           >
-            <img src={social.icon} alt="" aria-hidden="true" />
+            {social.icon ? (
+              <img src={social.icon} alt="" aria-hidden="true" />
+            ) : (
+              <i className="social-gmail-icon" aria-hidden="true" />
+            )}
             <span>{social.label}</span>
           </a>
         ))}
