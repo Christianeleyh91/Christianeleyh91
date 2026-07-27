@@ -23,7 +23,7 @@
       aboutLead:
         "من کریستیان ایلیه بابرودی هستم؛ متولد ۲۳ مرداد ۱۳۹۱ در تهران و اصالتاً اهل ارومیه.",
       aboutBody:
-        "هفت سال است پیانو بخشی از زندگی من شده؛ تمرینی برای شنیدن، صبر و ساختن جزئیات. در کنار موسیقی، برنامه‌نویسی با Python، C++، HTML و CSS راه دیگری است برای تبدیل ایده‌هایم به چیزی واقعی، دقیق و زنده.",
+        "هفت سال است پیانو بخشی از زندگی من شده؛ تمرینی برای شنیدن، صبر و ساختن جزئیات. در کنار موسیقی، برنامه‌نویسی با Python، \u2066C++\u2069، HTML و CSS راه دیگری است برای تبدیل ایده‌هایم به چیزی واقعی، دقیق و زنده.",
       pianoTitle: "گاهی یک نت، شروع یک ایده است.",
       pianoBody:
         "روی کلیدها بزن؛ این بخش کوچک، نقطه تلاقی موسیقی و کد من است.",
@@ -57,7 +57,7 @@
       aboutLead:
         "I’m Christian Eleyh Babrudy, born in Tehran on August 13, 2012, with roots in Urmia.",
       aboutBody:
-        "For seven years, the piano has taught me how to listen, stay patient, and shape the smallest details. Alongside music, Python, C++, HTML, and CSS give me another way to turn ideas into something real, precise, and alive.",
+        "For seven years, the piano has taught me how to listen, stay patient, and shape the smallest details. Alongside music, Python, \u2066C++\u2069, HTML, and CSS give me another way to turn ideas into something real, precise, and alive.",
       pianoTitle: "Sometimes one note starts an idea.",
       pianoBody:
         "Tap the keys — this little space is where music and code meet.",
