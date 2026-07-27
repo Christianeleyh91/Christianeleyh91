@@ -37,10 +37,16 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /Christianeleyh91/);
   assert.match(html, /github-profile-icon/);
   assert.match(html, /src="\/icons\/github\.svg"/);
+  assert.match(html, /mailto:christian\.eleyh1391@gmail\.com/);
+  assert.match(html, /social-gmail-icon/);
+  assert.match(html, /<span dir="ltr">DREAM<\/span>/);
+  assert.match(html, /<span dir="ltr">EVOLVE<\/span>/);
+  assert.match(
+    html,
+    /<bdi class="skill-name" dir="ltr">C\+\+<\/bdi>/,
+  );
   assert.match(html, /favicon\.svg\?v=ce-2/);
   assert.match(html, /https:\/\/open\.spotify\.com\//);
-  assert.match(html, /<span dir="ltr">C\+\+<\/span>/);
-  assert.match(html, /<span dir="ltr">JS<\/span>/);
   assert.doesNotMatch(html, /social-line/);
   assert.match(html, /ClientBoot-/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
