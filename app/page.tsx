@@ -5,16 +5,19 @@ const socials = [
     label: "Instagram",
     icon: "/icons/instagram.svg",
     href: "https://www.instagram.com/christianeleyh91",
+    brandIcon: true,
   },
   {
     label: "Telegram",
     icon: "/icons/telegram.svg",
     href: "https://t.me/Christianeleyh",
+    brandIcon: true,
   },
   {
     label: "YouTube",
     icon: "/icons/youtube.svg",
     href: "https://youtube.com/@christianeleyh",
+    brandIcon: true,
   },
   {
     label: "X",
@@ -28,13 +31,13 @@ const socials = [
   },
   {
     label: "Quera",
-    icon: "https://www.google.com/s2/favicons?domain=quera.org&sz=64",
+    icon: "https://www.google.com/s2/favicons?domain=quera.org&sz=256",
     href: "https://quera.org/profile/tvctpp",
     brandIcon: true,
   },
   {
     label: "Codeforces",
-    icon: "https://codeforces.com/favicon.ico",
+    icon: "https://img.icons8.com/?size=100&id=cX70lo7D7ExO&format=png",
     href: "https://codeforces.com/profile/Christianeleyh91",
     brandIcon: true,
   },
