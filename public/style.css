@@ -1213,10 +1213,30 @@ html[data-theme="light"] .social-rail img {
 
 .social-rail img.social-brand-icon,
 html[data-theme="light"] .social-rail img.social-brand-icon {
-  width: 21px;
-  min-width: 21px;
-  height: 19px;
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  margin-inline: 9px;
+  object-position: center;
   filter: none;
+}
+
+.social-rail a[aria-label="Codeforces"] img,
+html[data-theme="light"] .social-rail a[aria-label="Codeforces"] img {
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+
+.social-rail a[aria-label="Quera"] img {
+  background: transparent;
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+html[data-theme="light"] .social-rail a[aria-label="Quera"] img {
+  background: transparent;
+  filter: none;
+  mix-blend-mode: multiply;
 }
 
 .social-rail > a:hover img {
@@ -1607,9 +1627,10 @@ html[lang="en"] .title-kicker {
 
   .social-rail img.social-brand-icon,
   html[data-theme="light"] .social-rail img.social-brand-icon {
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    margin: 0;
   }
 
   .social-rail a > span {
