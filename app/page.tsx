@@ -27,6 +27,18 @@ const socials = [
     href: "https://github.com/Christianeleyh91",
   },
   {
+    label: "Quera",
+    icon: "https://quera.org/favicon.ico",
+    href: "https://quera.org/profile/tvctpp",
+    brandIcon: true,
+  },
+  {
+    label: "Codeforces",
+    icon: "https://codeforces.com/favicon.ico",
+    href: "https://codeforces.com/profile/Christianeleyh91",
+    brandIcon: true,
+  },
+  {
     label: "Gmail",
     icon: "https://ssl.gstatic.com/ui/v1/icons/mail/logo_loading_2x.png",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=christian.eleyh1391%40gmail.com",
