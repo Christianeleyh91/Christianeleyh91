@@ -44,7 +44,11 @@ test("renders Christian Eleyh portfolio", async () => {
   assert.match(html, /logo_loading_2x\.png/);
   assert.match(html, /https:\/\/codeforces\.com\/profile\/Christianeleyh91/);
   assert.match(html, /https:\/\/quera\.org\/profile\/tvctpp/);
-  assert.match(html, /img\.icons8\.com\/\?size=100&amp;id=cX70lo7D7ExO&amp;format=png/);
+  assert.match(html, /class="codeforces-logo"/);
+  assert.match(html, /class="codeforces-yellow"/);
+  assert.match(html, /class="codeforces-blue"/);
+  assert.match(html, /class="codeforces-red"/);
+  assert.doesNotMatch(html, /img\.icons8\.com/);
   assert.match(html, /\/s2\/favicons\?domain=quera\.org&amp;sz=256/);
   assert.match(html, /social-brand-icon/);
   assert.equal((html.match(/class="orbit-dot"/g) ?? []).length, 4);
