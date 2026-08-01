@@ -37,9 +37,7 @@ const socials = [
   },
   {
     label: "Codeforces",
-    icon: "https://img.icons8.com/?size=100&id=cX70lo7D7ExO&format=png",
     href: "https://codeforces.com/profile/Christianeleyh91",
-    brandIcon: true,
   },
   {
     label: "Gmail",
@@ -329,12 +327,20 @@ export default function Home() {
             className="magnetic"
             key={social.label}
           >
-            <img
-              src={social.icon}
-              alt=""
-              aria-hidden="true"
-              className={social.brandIcon ? "social-brand-icon" : undefined}
-            />
+            {social.label === "Codeforces" ? (
+              <b className="codeforces-logo" aria-hidden="true">
+                <i className="codeforces-yellow" />
+                <i className="codeforces-blue" />
+                <i className="codeforces-red" />
+              </b>
+            ) : (
+              <img
+                src={social.icon}
+                alt=""
+                aria-hidden="true"
+                className={social.brandIcon ? "social-brand-icon" : undefined}
+              />
+            )}
             <span>{social.label}</span>
           </a>
         ))}
