@@ -1221,10 +1221,42 @@ html[data-theme="light"] .social-rail img.social-brand-icon {
   filter: none;
 }
 
-.social-rail a[aria-label="Codeforces"] img,
-html[data-theme="light"] .social-rail a[aria-label="Codeforces"] img {
-  object-fit: contain;
-  object-position: 50% 50%;
+.codeforces-logo {
+  display: flex;
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  margin-inline: 8px;
+  transition: transform 0.25s var(--ease);
+}
+
+.codeforces-logo i {
+  display: block;
+  width: 5px;
+  border-radius: 2px 2px 1px 1px;
+  box-shadow: 0 1px 4px color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.codeforces-yellow {
+  height: 13px;
+  background: #f7c744;
+}
+
+.codeforces-blue {
+  height: 19px;
+  background: #3186c8;
+}
+
+.codeforces-red {
+  height: 15px;
+  background: #ef4b50;
+}
+
+.social-rail > a:hover .codeforces-logo {
+  transform: scale(1.08);
 }
 
 .social-rail a[aria-label="Quera"] img {
